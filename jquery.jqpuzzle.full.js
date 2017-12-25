@@ -809,7 +809,7 @@ $.fn.jqPuzzle = function(settings, texts) {
 					if(shuffled) {
 						// check if the puzzle is solved
 						solved = checkSolution($pieces);
-						if(!solved) {
+						if(solved) {
 							if(timer) timer.stop();
 							shuffled = false;
 							$gui.addClass('jqp-solved');

@@ -71,7 +71,7 @@
 	margin-right: 15px;
 	padding: 3px 5px;
 	border: 1px outset #FFFFFF;
-	font-size: 14px;
+	font-size: 30px;
 	line-height: normal;
 }
 
@@ -93,6 +93,7 @@
 /* disabled state for buttons */
 .jqPuzzle .jqp-controls a.jqp-disabled {
 	margin-top: 25px;
+	font-size: 30px;
 	text-align: center;
 	background-color: #DDDDEE;
 	color: #FFFFFF;
@@ -108,7 +109,7 @@
 	border: none;
 	background-color: transparent;
 	color: #666666;
-	font-size: 14px;
+	font-size: 30px;
 }
 
 /* disabled state for the display (non-shuffled puzzle) */
@@ -126,14 +127,15 @@
 
 /* a text field for the moves/seconds display */
 .jqPuzzle .jqp-controls span input {
+	font-family: Lobster, cursive;
 	margin: 0px 3px;
 	padding: 3px;
 	padding-bottom: 2px;
 	border-style: none;
 	background-color: #FFFFFF;
 	color: #666666;
-	font-weight: bold;
 	text-align: right;
+	font-size: 30px;
 }
 
 /* disabled state for the text fields */

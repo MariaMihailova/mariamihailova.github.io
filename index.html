@@ -6,49 +6,14 @@
     <link rel="stylesheet" href="style.css"> 
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 </head>
-<script type="text/javascript" src="jquery.js"></script>
-
-<body>
-    <div id="noimage"> 
-        <div class="notxt"> Неть!</div>
-        <img src="no_img.png" alt="">
-        <span>X</span>
-    </div>
-        
-        
-    <div id="content">
-        <h1 class="elegantshadow">Отгадаешь все загадки <br> и получишь подарок на Новый Год!</h1>
-        <div id="center" class="one"> 
-        
-        <div id="level">
-         <h3>Первый уровень</h3>
-         </div>
-        <img src="anime1.gif" alt="" class='anime1'>
-        
-            <div id="box">
-
-                <p>Когда мы начали встречаться? Укажи дату и месяц в формате ДД.ММ!</p>
-                <p><input type="text" name="answerOne" id="answerOne" class = 'answers'> <br>
-                <span id="validOne"></span></p>
-
-                <p>Напиши мой любимый вид роллов</p>
-                <p><input type="text" name="answerTwo" id="answerTwo" disabled class = 'answers'> <br>
-                <span id="validTwo"></span></p>
-
-                <p>Мой самый любимый цвет?</p>
-                <p><input type="text" name="answerThree" id="answerThree" disabled class = 'answers'> <br>
-                <span id="validThree"></span></p>
-
-                <p>В какую игру я больше всего люблю играть на компьютере?</p>
-                <p><input type="text" name="answerFour" id="answerFour" disabled class = 'answers'> <br>
-                <span id="validFour"></span></p>
-
-                <p><input class = 'button' type="submit" name="submit" id="submit" value="Перейти на второй уровень" disabled onClick='location.href="second.html"'/></p>
-            </div>
+<body>     
+    <div id="main">
+        <h1>Приветствую Маша!</h1>
+        <p>Сегодня тебе предстоит пройти несколько уровней, которые позволят тебе получить подарок на Новый Год!</p>
+        <span id="maincont">
+           <img src="main.png" alt="">
+           <p><input class = 'button' type="submit" name="submit" id="submit" value="Пройти новогоднее испытание!" onClick='location.href="first.html"'/></p>
+        </span>
         </div>
-    </div>
-     <script src ="js.js"></script>
-
 </body>
-
 </html>
