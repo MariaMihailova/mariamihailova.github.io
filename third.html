@@ -31,12 +31,42 @@ body{
  	border-left: 1px solid #CCCCCC;
 }
 .button {
-	margin-top: 50px;
+	margin-top: 10px;
 	display: none;
-    border-radius: 5px;
-    font-size: 24px;
-    text-align: center;
+    color: #2e353d;
+    border: 3px solid #a0a0a0;
+    background-color: #f5f5f5;
+    width: 375px;
+    height: 40px;
+    padding-left:10px;
+    font-size: 26px;
+    font-weight: 100;
+    margin-bottom: 12px;
+    background-color:  #c0c0c0;
     font-family: 'Lobster', cursive;
+}
+.button:hover {
+    background-color: #008b8b;
+    cursor: pointer;
+}
+
+button {
+	margin-top: 10px;
+    color: #2e353d;
+    border: 3px solid #a0a0a0;
+    background-color: #f5f5f5;
+    width: 375px;
+    height: 40px;
+    padding-left:10px;
+    font-size: 26px;
+    font-weight: 100;
+    margin-bottom: 12px;
+    background-color:  #c0c0c0;
+    font-family: 'Lobster', cursive;
+}
+button:hover {
+    background-color: #008b8b;
+    cursor: pointer;
 }
 </style>
 <script type="text/javascript">
@@ -44,11 +74,34 @@ body{
 	//Массив вопросов и ответа
 	var data_array = [
 	  ["Сколько сантиметров в метре?","10","1024","100","1000",3],
+
 	  ["Сколько холодных цветов в радуге?","Два","Три","Четыре","Один",2],
+
+	  ["<img src='question1.jpg'> <br> Под каким псевдонимом выступает этот казах?","Сквиртонит","Перитонит","Скриптонит","Трахеобронхит", 3],
+
 	  ["Кто сказал: «Краткость – сестра таланта»","Чехов","Пушкин","Лермонтов","Есенин",1],
+
 	  ["Кто издал указ, согласно которому Новый год необходимо отмечать 1 января?","Екатерина 2","Николай 2","Петр 1","Екатерина 1",3],
+
+	  ["<img src='question2.jpg'> <br> Кто является автором этой картины?","Серов","Васнецов","Шишкин","Саврасов", 4],
+
 	  ["Сколько раз забрасывал невод в море старик из сказки «О рыбаке и рыбке»?","Один раз","Два раза","Три раза","Четыре раза",3],
+
+	  ["Как на древнегреческом языке звучит слово «землеописание»?","Геометрия","География","Геология","Геодезия",2],
+
+	  ["<img src='question3.png'> <br> Какая страна изображена на картинке?","Австралия","Китай","Америка","Россия", 4],
+
+	  ["Какой сказочный персонаж А.Н. Толстого очень похож на персонажа сказки Карло Коллоди?","Буратино","Оптимус Прайм","Винни Пух","Микки Маус", 1],
+
 	  ["Кто написал роман «Мастер и Маргарита»","Булгаков","Гумелев","Достоевский","Пастернак",1],
+
+	  ["<img src='question4.jpg'> <br> В каком стиле написана картина?","Импрессионизм","Кубизм","Поп-арт","Абстракционизм​", 2],
+
+	  ["Какое преступление совершил Родион Раскольников?","Проиграл мид","Спалил дом","Убил бабушку","Ограбил банк",3],
+
+	  ["<img src='question5.jpg'> <br> Где обитают эти существа?","Антарктида","Атлантида","Арктика","Атлантика",1],
+
+	  ["Кто был первым и единственным президентом СССР","Хрущев","Ельцин","Горбачев","Сталин",3],
 	];
 
 	var plus = 0;
@@ -115,8 +168,8 @@ body{
 				
 				var percent =  Math.round(plus/count_answer*100);				
 				var res = 'Плохо!';
-				if(percent>70) {
-					res = 'Молодец лапс! Ты почти у цели!';
+				if(percent>60) {
+					res = 'Молодец! Ты прошла все 3 уровня! ';
 					document.getElementById('submit').style.display='block';
 					document.getElementById('end').style.display='none';
 
@@ -129,7 +182,7 @@ body{
 </head>
 <body>
 	<center>			
-		<p style="font-size: 38px;font-weight: bold;padding-top: 2px;" id="time">А теперь простые вопросики! Всего 6 вопросов, тебе нужно ответить минимум на 5! Дерзай!</p>
+		<p style="font-size: 38px;font-weight: bold;padding-top: 2px;" id="time">А теперь простые вопросики! <br>Всего 15 вопросов <br> Дерзай!</p>
 		<p style="font-size: 38px;font-weight: bold;padding-top: 2px;" id="result"></p>
 					
 		<p style="font-size: 38px;font-weight: bold;padding-top: 2px;" id="question"></p>
@@ -141,11 +194,12 @@ body{
 		<button onclick="check(3)" class="question" id="option3"></button>
 		
 		<button onclick="check(4)" class="question" id="option4"></button>
+
 	</center><br>
 	<center>
 		<button id="start" class="question" onclick="check(0)">Приступить к тесту</button>
-		<script type="text/javascript"> var curent_url = document.URL; document.write("<a id='end' style='display: none;' class='question' href='" + curent_url + "'>Начать сначала</a>"); </script>	
-		<input class = 'button' type="submit" name="submit" id="submit" value="Перейти на четвертый уровень"  onClick='location.href="four.html"'/>
+		<script type="text/javascript"> var curent_url = document.URL; document.write("<a id='end' style='display: none; margin-top: 10px;    color: #2e353d;    border: 3px solid #a0a0a0;    background-color: #f5f5f5;    width: 375px;    height: 40px;    padding-left:10px;    font-size: 26px;    font-weight: 100;    margin-bottom: 12px;    background-color:  #c0c0c0;    font-family: 'Lobster', cursive;' class='question' href='" + curent_url + "'>Начать сначала</a>"); </script>	
+		<input class = 'button' type="submit" name="submit" id="submit" value="Получить подарочек"  onClick='location.href="four.html"'/>
 	</center><br><br>
 </body>
 </html>

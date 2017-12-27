@@ -1,7 +1,6 @@
 
 body {
     font-family: 'Lobster', cursive;
-    margin: 0 auto;
     text-align: center;
 }
 
@@ -15,7 +14,6 @@ body {
 
 #content {
     margin: 0 auto;
-    min-height: calc(100vh - 140px); 
     text-align: center;
 }
 
@@ -28,14 +26,6 @@ body {
     margin-bottom: 50px;
 }
 
-#content #level {
-    color: #242424;
-    font-size: 35px;
-    font-weight: 400;
-    text-align: center;
-    margin-bottom: 45px;
-}
-
 #content #box {
     background-color: #ffffff;
     margin: auto;
@@ -44,56 +34,58 @@ body {
 }
 
 #content #box p {
-    color: #242424;
-    font-size: 24px;
+    color: #202424;
+    font-size: 35px;
     font-weight: 100;
     text-align: center;
     margin-top: 37px;
     margin-bottom: 30px;
 }
 
-.answers {
-    border: 1px solid #a0a0a0;
-    background-color: #f5f5f5;
-    width: 260px;
-    height: 34px;
-    padding-left:10px;
-    font-size: 20px;
-    font-weight: 100;
-    margin-bottom: 12px;
-    font-family: 'Lobster', cursive;
-}
-
 #content #box input {
     border: 1px solid #a0a0a0;
     background-color: #f5f5f5;
     width: 260px;
-    height: 34px;
+    height: 44px;
     padding-left:10px;
-    font-size: 20px;
+     font-size: 35px;
     font-weight: 100;
     margin-bottom: 12px;
     font-family: 'Lobster', cursive;
 }
 
-#content #box #button {
-    width: 200px;
-    height: 55px;
-    display: block;
-    float: left;
-    background-color:  #8cbbd3;
-    color:  #ffffff;
-    font-size: 24px;
-    font-weight: 300;
-    text-align: center;
-    text-decoration: none;
-    margin-top: 30px;
-    margin-bottom: 100px;
-    padding-right: 7px;
+#content #box .button {
+    color: #2e353d;
+    border: 3px solid #a0a0a0;
+    background-color: #f5f5f5;
+    width: 320px;
+    height: 40px;
+    padding-left:10px;
+    font-size: 26px;
+    font-weight: 100;
+    margin-bottom: 12px;
+    background-color:  #c0c0c0;
+}
+#maincont .button {
+    color: #2e353d;
+    border: 3px solid #a0a0a0;
+    background-color: #f5f5f5;
+    width: 320px;
+    height: 40px;
+    padding-left:10px;
+    font-size: 26px;
+    font-weight: 100;
+    margin-bottom: 12px;
+    background-color:  #c0c0c0;
 }
 
-#content #box #button:hover {
-    background-color: #5ba1d3;
+#content #box .button:hover {
+    background-color: #008b8b;
+    cursor: pointer;
+}
+
+#maincont .button:hover {
+    background-color: #008b8b;
     cursor: pointer;
 }
 .ok {
@@ -149,7 +141,7 @@ h1 {
 
 .button {
     border-radius: 5px;
-    font-size: 24px;
+    font-size: 34px;
     text-align: center;
     font-family: 'Lobster', cursive;
 }
@@ -163,10 +155,6 @@ h1 {
     box-shadow: 10px 10px 10px rgba(10,25,50,0.5); 
     padding: 10px;
 }
-#main {
-    font-size: 50px;
-    opacity: 0.9;
-}
 #background {
     border: 2px solid grey;
     background: url(back.jpg) 100% 100% no-repeat;
@@ -178,8 +166,17 @@ h1 {
     padding: 10px;
 }
 #main {
+    text-align: center;
+    vertical-align: middle;
     font-size: 40px;
+    margin-top: 10%;
 }
-#maincont {
-    display: inline;
+#mainfinal {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 40px;
+    margin-top: 4%;
+}
+#maincont .button {
+    width: 400px;
 }
