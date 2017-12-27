@@ -9,7 +9,7 @@ $(document).ready(function(){
         answerOne.blur(function(){
             //1 question
             if(answerOne.val() != ''){
-                if(answerOne.val() == '0803' ){
+                if(answerOne.val().replace(/\s/g, '') == '0803' || answerOne.val().replace(/\s/g, '') == '08.03' ){
                     $('#validOne').text('Ответ правильный');
                     $('#answerTwo').attr('disabled', false);
                     $('#validOne').removeClass('error').addClass('ok');
@@ -32,7 +32,7 @@ $(document).ready(function(){
         answerTwo.blur(function(){
             //2 question
             if(answerTwo.val() != ''){
-                if(answerTwo.val() == 'Филадельфия' || answerTwo.val() == 'филадельфия'){
+                if(answerTwo.val().replace(/\s/g, '') == 'Филадельфия' || answerTwo.val().replace(/\s/g, '') == 'филадельфия'){
                     $('#validTwo').text('Верно');
                     $('#answerThree').attr('disabled', false);
                     $('#validTwo').removeClass('error').addClass('ok');
@@ -54,7 +54,7 @@ $(document).ready(function(){
         answerThree.blur(function(){
             //3 question
             if(answerThree.val() != ''){
-                if(answerThree.val() == "зеленый" || answerThree.val() == "зелёный" || answerThree.val() == "Зелёный" || answerThree.val() == "Зеленый"){
+                if(answerThree.val().replace(/\s/g, '') == "зеленый" || answerThree.val().replace(/\s/g, '') == "зелёный" || answerThree.val().replace(/\s/g, '') == "Зелёный" || answerThree.val().replace(/\s/g, '') == "Зеленый"){
                     $('#validThree').text('Умничка, правильно!');
                     $('#answerFour').attr('disabled', false);
                     $('#validThree').removeClass('error').addClass('ok');
@@ -77,7 +77,7 @@ $(document).ready(function(){
         answerFour.blur(function(){
             //4 question
             if(answerFour.val() != ''){
-                if(answerFour.val() == "Дота" || answerFour.val() == "дота" || answerFour.val() == "dota" || answerFour.val() == "Dota" ){
+                if(answerFour.val().replace(/\s/g, '') == "Дота" || answerFour.val().replace(/\s/g, '') == "дота" || answerFour.val().replace(/\s/g, '') == "dota" || answerFour.val().replace(/\s/g, '') == "Dota" ){
                     $('#validFour').text('Вадим бы тоже отгадал');
                     $('#answerFour').attr('disabled', false);
                     $('#submit').attr('disabled', false);
